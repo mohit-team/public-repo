@@ -1,0 +1,142 @@
+{
+  "paragraphs": [
+    {
+      "text": "%pyspark\n\nfrom pyspark.sql import HiveContext\nmysqlContext \u003d HiveContext(sc) \nFromHive \u003d mysqlContext.sql(\"select * from mohit_new.mohit_table\")\nFromHive.show()\n",
+      "user": "myadav@qubole.com",
+      "dateUpdated": "Mar 7, 2019 11:07:21 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "lineNumbers": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [],
+        "numCompletedTasks": 0,
+        "numTasks": 0,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1550837120983_2113903802",
+      "id": "20190222-120520_287365091_q_PM5A7TB5H71550836713",
+      "result": {
+        "code": "ERROR",
+        "type": "TEXT",
+        "msg": "Traceback (most recent call last):\n  File \"/tmp/zeppelin_pyspark-1552411127651659366.py\", line 333, in \u003cmodule\u003e\n    raise Exception(traceback.format_exc())\nException: Traceback (most recent call last):\n  File \"/tmp/zeppelin_pyspark-1552411127651659366.py\", line 331, in \u003cmodule\u003e\n    exec(code)\n  File \"\u003cstdin\u003e\", line 4, in \u003cmodule\u003e\n  File \"/usr/lib/spark/python/pyspark/sql/dataframe.py\", line 350, in show\n    print(self._jdf.showString(n, 20, vertical))\n  File \"/usr/lib/spark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py\", line 1257, in __call__\n    answer, self.gateway_client, self.target_id, self.name)\n  File \"/usr/lib/spark/python/pyspark/sql/utils.py\", line 63, in deco\n    return f(*a, **kw)\n  File \"/usr/lib/spark/python/lib/py4j-0.10.7-src.zip/py4j/protocol.py\", line 328, in get_return_value\n    format(target_id, \".\", name), value)\nPy4JJavaError: An error occurred while calling o178.showString.\n: java.lang.RuntimeException: serious problem\n\tat org.apache.hadoop.hive.ql.io.orc.OrcInputFormat.generateSplitsInfo(OrcInputFormat.java:1103)\n\tat org.apache.hadoop.hive.ql.io.orc.OrcInputFormat.getSplits(OrcInputFormat.java:1146)\n\tat org.apache.spark.rdd.HadoopRDD.getPartitions(HadoopRDD.scala:342)\n\tat org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:253)\n\tat org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:251)\n\tat scala.Option.getOrElse(Option.scala:121)\n\tat org.apache.spark.rdd.RDD.partitions(RDD.scala:251)\n\tat org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:46)\n\tat org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:253)\n\tat org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:251)\n\tat scala.Option.getOrElse(Option.scala:121)\n\tat org.apache.spark.rdd.RDD.partitions(RDD.scala:251)\n\tat org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:46)\n\tat org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:253)\n\tat org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:251)\n\tat scala.Option.getOrElse(Option.scala:121)\n\tat org.apache.spark.rdd.RDD.partitions(RDD.scala:251)\n\tat org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:46)\n\tat org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:253)\n\tat org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:251)\n\tat scala.Option.getOrElse(Option.scala:121)\n\tat org.apache.spark.rdd.RDD.partitions(RDD.scala:251)\n\tat org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:46)\n\tat org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:253)\n\tat org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:251)\n\tat scala.Option.getOrElse(Option.scala:121)\n\tat org.apache.spark.rdd.RDD.partitions(RDD.scala:251)\n\tat org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:46)\n\tat org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:253)\n\tat org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:251)\n\tat scala.Option.getOrElse(Option.scala:121)\n\tat org.apache.spark.rdd.RDD.partitions(RDD.scala:251)\n\tat org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:46)\n\tat org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:253)\n\tat org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:251)\n\tat scala.Option.getOrElse(Option.scala:121)\n\tat org.apache.spark.rdd.RDD.partitions(RDD.scala:251)\n\tat org.apache.spark.sql.execution.SparkPlan.executeTake(SparkPlan.scala:340)\n\tat org.apache.spark.sql.execution.CollectLimitExec.executeCollect(limit.scala:38)\n\tat org.apache.spark.sql.Dataset.org$apache$spark$sql$Dataset$$collectFromPlan(Dataset.scala:3285)\n\tat org.apache.spark.sql.Dataset$$anonfun$head$1.apply(Dataset.scala:2494)\n\tat org.apache.spark.sql.Dataset$$anonfun$head$1.apply(Dataset.scala:2494)\n\tat org.apache.spark.sql.Dataset$$anonfun$52.apply(Dataset.scala:3266)\n\tat org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:78)\n\tat org.apache.spark.sql.Dataset.withAction(Dataset.scala:3265)\n\tat org.apache.spark.sql.Dataset.head(Dataset.scala:2494)\n\tat org.apache.spark.sql.Dataset.take(Dataset.scala:2710)\n\tat org.apache.spark.sql.Dataset.showString(Dataset.scala:256)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)\n\tat py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)\n\tat py4j.Gateway.invoke(Gateway.java:282)\n\tat py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)\n\tat py4j.commands.CallCommand.execute(CallCommand.java:79)\n\tat py4j.GatewayConnection.run(GatewayConnection.java:238)\n\tat java.lang.Thread.run(Thread.java:748)\nCaused by: java.util.concurrent.ExecutionException: java.io.FileNotFoundException: No such file or directory: s3n://mohit-s3/warehouse/mohit_new.db/mohit_table\n\tat java.util.concurrent.FutureTask.report(FutureTask.java:122)\n\tat java.util.concurrent.FutureTask.get(FutureTask.java:192)\n\tat org.apache.hadoop.hive.ql.io.orc.OrcInputFormat.generateSplitsInfo(OrcInputFormat.java:1064)\n\t... 58 more\nCaused by: java.io.FileNotFoundException: No such file or directory: s3n://mohit-s3/warehouse/mohit_new.db/mohit_table\n\tat org.apache.hadoop.fs.s3a.S3AFileSystem.listPrefixV2(S3AFileSystem.java:1955)\n\tat org.apache.hadoop.fs.s3a.S3AFileSystem.listPrefix(S3AFileSystem.java:1759)\n\tat org.apache.hadoop.fs.s3a.S3AFileSystem.listStatus(S3AFileSystem.java:1982)\n\tat org.apache.hadoop.fs.FileSystem.listStatus(FileSystem.java:1531)\n\tat org.apache.hadoop.fs.FileSystem.listStatus(FileSystem.java:1571)\n\tat org.apache.hadoop.fs.FileSystem$4.\u003cinit\u003e(FileSystem.java:1735)\n\tat org.apache.hadoop.fs.FileSystem.listLocatedStatus(FileSystem.java:1734)\n\tat org.apache.hadoop.fs.FileSystem.listLocatedStatus(FileSystem.java:1710)\n\tat org.apache.hadoop.hive.shims.Hadoop23Shims.listLocatedStatus(Hadoop23Shims.java:654)\n\tat org.apache.hadoop.hive.ql.io.AcidUtils.getAcidState(AcidUtils.java:361)\n\tat org.apache.hadoop.hive.ql.io.orc.OrcInputFormat$FileGenerator.call(OrcInputFormat.java:673)\n\tat org.apache.hadoop.hive.ql.io.orc.OrcInputFormat$FileGenerator.call(OrcInputFormat.java:659)\n\tat java.util.concurrent.FutureTask.run(FutureTask.java:266)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\n\t... 1 more\n\n\n"
+      },
+      "dateCreated": "Feb 22, 2019 12:05:20 PM",
+      "dateSubmitted": "Mar 7, 2019 11:07:21 AM",
+      "dateStarted": "Mar 7, 2019 11:07:29 AM",
+      "dateFinished": "Mar 7, 2019 11:08:36 AM",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "text": "%pyspark\ndf \u003d spark.sql(\"SELECT * FROM mohit_new.mohit_table\")\nschema \u003d df.schema\ndf.show()\ndf.coalesce(3).write.option(\"header\", \"true\").csv(\"s3://mohit-s3-new/MD11\")",
+      "user": "myadav@qubole.com",
+      "dateUpdated": "Mar 7, 2019 11:01:56 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "lineNumbers": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [],
+        "numCompletedTasks": 0,
+        "numTasks": 0,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1550837331154_2047866553",
+      "id": "20190222-120851_2027211844_q_PM5A7TB5H71550836713",
+      "result": {
+        "code": "ERROR",
+        "type": "TEXT",
+        "msg": "Traceback (most recent call last):\n  File \"/tmp/zeppelin_pyspark-3172296305393369173.py\", line 333, in \u003cmodule\u003e\n    raise Exception(traceback.format_exc())\nException: Traceback (most recent call last):\n  File \"/tmp/zeppelin_pyspark-3172296305393369173.py\", line 326, in \u003cmodule\u003e\n    exec(code)\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"/usr/lib/spark/python/pyspark/sql/session.py\", line 767, in sql\n    return DataFrame(self._jsparkSession.sql(sqlQuery), self._wrapped)\n  File \"/usr/lib/spark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py\", line 1257, in __call__\n    answer, self.gateway_client, self.target_id, self.name)\n  File \"/usr/lib/spark/python/pyspark/sql/utils.py\", line 69, in deco\n    raise AnalysisException(s.split(\u0027: \u0027, 1)[1], stackTrace)\nAnalysisException: u\u0027Path does not exist: s3n://mohit-s3/warehouse/mohit_new.db/mohit_table;\u0027\n\n"
+      },
+      "dateCreated": "Feb 22, 2019 12:08:51 PM",
+      "dateSubmitted": "Mar 7, 2019 11:01:56 AM",
+      "dateStarted": "Mar 7, 2019 11:01:56 AM",
+      "dateFinished": "Mar 7, 2019 11:01:57 AM",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "text": "import boto\nimport boto.s3.connection\naccess_key \u003d \u0027AKIAJQGRPAQPZQPGGKKQ\u0027\nsecret_key \u003d \u0027k8EltdA2g+wSO6lC1JFM1xHcU7HtoFjaZAtUvYnU\u0027\n\nconn \u003d boto.connect_s3(\n        aws_access_key_id \u003d access_key,\n        aws_secret_access_key \u003d secret_key,\n        #host \u003d \u0027objects.dreamhost.com\u0027,\n        #is_secure\u003dTrue,               # uncomment if you are not using ssl\n        calling_format \u003d boto.s3.connection.OrdinaryCallingFormat(),\n        )\n",
+      "user": "myadav@qubole.com",
+      "dateUpdated": "Mar 7, 2019 11:01:28 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "lineNumbers": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v1",
+      "jobName": "paragraph_1550837861549_-1170419555",
+      "id": "20190222-121741_1819113117_q_PM5A7TB5H71550836713",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": ""
+      },
+      "dateCreated": "Feb 22, 2019 12:17:41 PM",
+      "dateSubmitted": "Mar 4, 2019 8:32:51 AM",
+      "dateStarted": "Mar 4, 2019 8:32:51 AM",
+      "dateFinished": "Mar 4, 2019 8:32:51 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 1000
+    }
+  ],
+  "name": "dataframe_write",
+  "id": "PM5A7TB5H71550836713",
+  "angularObjects": {
+    "2E5SR4STX811171551956755559:shared_process": [],
+    "2E7RPVHZW811171551956755556:shared_process": [],
+    "2E6C96UUY811171551956755559:shared_process": [],
+    "2E6ZTAFY7811171551956755560:shared_process": []
+  },
+  "config": {
+    "isDashboard": false,
+    "defaultLang": "pyspark"
+  },
+  "info": {},
+  "source": "FCN"
+}
